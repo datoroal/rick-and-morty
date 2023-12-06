@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 
 
@@ -11,6 +12,7 @@ import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
     HomeComponent,
     NavbarComponent,
     JumbotronComponent,
+    SidenavComponent,
   ],
   imports: [
     CommonModule

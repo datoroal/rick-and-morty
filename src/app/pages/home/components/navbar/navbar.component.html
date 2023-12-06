@@ -5,7 +5,7 @@
       {{brandTitle}}
     </a>
     <button class="navbar__toggler" type="button">
-      <span class="lnr lnr-menu"></span>
+      <svg></svg>
     </button>
     <div class="navbar__actions" id="navbar-nav-header">
       <ul class="navbar__actions--nav">
@@ -26,7 +26,7 @@
             <svg></svg>
           </a>
         </li>
-        <li class="navbar__actions--item only-desktop">
+        <li class="navbar__actions--item only-desktop" (click)="toggleSidenav()">
           <a class="navbar__actions--link navbar__actions--menu" href="#">
             <svg></svg>
           </a>

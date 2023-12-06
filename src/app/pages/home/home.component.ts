@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  public openSidenav: boolean = false;
 
+  public toggleSidenavEvent(event: boolean): void {
+    this.openSidenav = event;
+  }
 }

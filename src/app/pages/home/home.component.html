@@ -1,2 +1,5 @@
-<app-navbar></app-navbar>
+<app-navbar (toggleSidenavEvent)="toggleSidenavEvent($event)">
+</app-navbar>
+<app-sidenav [openSidenav]="openSidenav" (toggleSidenavEvent)="toggleSidenavEvent($event)">
+</app-sidenav>
 <app-jumbotron></app-jumbotron>

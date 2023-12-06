@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   public brandTitle = 'RICK AND MORTY';
+  @Output() toggleSidenavEvent: EventEmitter<boolean> = new EventEmitter<boolean>();
+
+  public toggleSidenav(): void {
+    this.toggleSidenavEvent.emit(true);
+  }
 
 }
