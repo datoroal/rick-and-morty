@@ -1,0 +1,5 @@
+@import "./colors/base-color.scss";
+
+:root {
+  @extend .colors;
+}
