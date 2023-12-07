@@ -5,6 +5,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { FeaturesComponent } from './components/features/features.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -17,7 +18,8 @@ import { FeaturesComponent } from './components/features/features.component';
     FeaturesComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   exports: [
     HomeComponent,

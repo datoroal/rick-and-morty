@@ -5,7 +5,7 @@ import { HomeModule } from './pages/home/home.module';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, RouterOutlet, HomeModule],
+  imports: [CommonModule, RouterOutlet, HomeModule,],
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
