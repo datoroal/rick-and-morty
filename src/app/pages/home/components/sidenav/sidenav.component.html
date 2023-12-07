@@ -11,8 +11,16 @@
       </div>
     </div>
 
-    <div class="sidenav__searched">
-      dfkjewfj
+    <div class="sidenav__list">
+      <div class="sidenav__list--item" *ngFor="let character of charactersList">
+        <div>
+          <img class="sidenav__list--image" [src]="character.image" alt="{{character.name}}">
+        </div>
+        <p>
+          {{character.name}}
+        </p>
+      </div>
+
     </div>
 
   </div>

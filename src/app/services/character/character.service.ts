@@ -27,6 +27,10 @@ export class CharacterService {
     return this.httpClient.get<ResponseModel<CharacterModel>>(`${this.baseUrlApi}`);
   }
 
+  public getCharactersByName(characterName: string): Observable<ResponseModel<CharacterModel>> {
+    return this.httpClient.get<ResponseModel<CharacterModel>>(`${this.baseUrlApi}?name=${characterName}`);
+  }
+
   public getCharacter(characterid: number): Observable<CharacterModel> {
     return this.httpClient.get<CharacterModel>(`${this.baseUrlApi}/${characterid}`);
   }
