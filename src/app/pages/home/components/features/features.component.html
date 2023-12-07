@@ -13,19 +13,11 @@
       <!-- End of Section Title -->
       <div class="features__grid">
         <!-- Features Item -->
-        <div class="col-md-4 col-sm-12 text-center mt-4" *ngFor="let character of charactersList">
-          <div class="shadow rounded features__item p-4 mb-4" data-aos="fade-up">
-            <div class="my-4">
-              <i class="lnr lnr-cog fs-40"></i>
-            </div>
-            <h4>Easy to Customize</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-          </div>
-          <div class="shadow rounded features__item p-4 mb-4" data-aos="fade-up">
-            <div class="my-4">
-              <i class="lnr lnr-frame-contract fs-40"></i>
-            </div>
-            <h4>Pixel Perfect</h4>
+        <div class="features__item" *ngFor="let character of charactersList">
+          <img [src]="character.image" alt="character image">
+          <div class="">
+            <h4>{{character.name}}</h4>
+            <p><b>Species: </b><span>{{character.species}} </span></p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
           </div>
         </div>
