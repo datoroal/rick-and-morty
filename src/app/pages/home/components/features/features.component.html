@@ -6,19 +6,21 @@
         <h2>
           Catálogo <a href="https://gettemplates.co" target="_blank">Rick & Morty</a>
         </h2>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-          <br> pharetra augue. Donec id elit non mi.
+        <p>
+          A continuación los personajes de Rick and Morty.
         </p>
       </div>
       <!-- End of Section Title -->
       <div class="features__grid">
         <!-- Features Item -->
         <div class="features__item" *ngFor="let character of charactersList">
-          <img [src]="character.image" alt="character image">
+          <div class="features__item--image">
+            <img [src]="character.image" alt="character image">
+          </div>
           <div class="">
             <h4>{{character.name}}</h4>
-            <p><b>Species: </b><span>{{character.species}} </span></p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+            <p><b>Species: </b>{{character.species}} </p>
+            <p><b>Status: </b>{{character.status}} </p>
           </div>
         </div>
         <!-- End of Feature Item -->
