@@ -61,7 +61,11 @@
   &__rectangle-2 {
     width: 2000px;
     height: 400px;
-    background: linear-gradient(to right, #4a00e0, var(--lt-color-purple-200));
+    background: linear-gradient(
+      to right,
+      var(--lt-color-purple-400),
+      var(--lt-color-purple-200)
+    );
     transform-origin: 80% 110% 0;
     position: absolute;
     right: 0;

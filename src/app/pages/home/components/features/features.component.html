@@ -4,16 +4,17 @@
       <!-- Section Title -->
       <div class="features__title">
         <h2>
-          Catálogo <a href="https://gettemplates.co" target="_blank">Rick & Morty</a>
+          Characters Rick & Morty
         </h2>
         <p>
-          A continuación los personajes de Rick and Morty.
+          Below are the Rick and Morty characters.
         </p>
       </div>
       <!-- End of Section Title -->
       <div class="features__grid">
         <!-- Features Item -->
-        <div class="features__item" *ngFor="let character of charactersList">
+        <div class="features__item" *ngFor="let character of charactersList"
+          (click)="redirectToCharacter(character.id)">
           <div class="features__item--image">
             <img [src]="character.image" alt="character image">
           </div>

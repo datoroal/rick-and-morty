@@ -12,9 +12,10 @@
     </div>
 
     <div class="sidenav__list">
-      <div class="sidenav__list--item" *ngFor="let character of charactersList">
+      <div class="sidenav__list--item" *ngFor="let character of charactersList"
+        (click)="redirectToCharacter(character.id)">
         <div>
-          <img class="sidenav__list--image" [src]="character.image" alt="{{character.name}}">
+          <img class="sidenav__list--image" [src]="character.image" [alt]="character.name">
         </div>
         <p>
           {{character.name}}

@@ -24,6 +24,10 @@ export class FeaturesComponent implements OnInit {
     this.getCharacters(this.currentPage);
   }
 
+  public redirectToCharacter(characterId: number): void {
+    window.location.href = `/character/${characterId}`;
+  }
+
   private getCharacters(pageNumber?: number): void {
     this.characterService.getCharacters(pageNumber).subscribe({
       next: (response: ResponseModel<CharacterModel>) => {

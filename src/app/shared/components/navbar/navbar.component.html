@@ -1,4 +1,4 @@
-<nav id="header-navbar" class="navbar">
+<nav id="header-navbar" class="navbar" [ngClass]="{'navbar__background': hasBackground}">
   <div class="navbar__container">
 
     <a class="navbar__brand" href="/">
@@ -12,14 +12,8 @@
         <li class="navbar__actions--item">
           <a class="navbar__actions--link" href="/">Home</a>
         </li>
-        <li class="navbar__actions--item">
-          <a class="navbar__actions--link" href="about.html">About</a>
-        </li>
-        <li class="navbar__actions--item">
-          <a class="navbar__actions--link" href="contact.html">Contact</a>
-        </li>
         <li class="navbar__actions--item navbar__actions--search" (click)="toggleSidenav()">
-          <a class="navbar__actions--link" href="#">
+          <a class="navbar__actions--link">
             <svg></svg>
           </a>
         </li>

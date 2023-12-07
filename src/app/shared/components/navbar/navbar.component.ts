@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'navbar',
@@ -7,6 +7,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class NavbarComponent {
   public brandTitle = 'RICK AND MORTY';
+  @Input() hasBackground?: boolean;
   @Output() toggleSidenavEvent: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   public toggleSidenav(): void {

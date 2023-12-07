@@ -1,10 +1,10 @@
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Subscription } from 'rxjs';
-import { CharacterService } from '../../../../services/character/character.service';
+import { CharacterService } from '../../../services/character/character.service';
 import { HttpErrorResponse } from '@angular/common/http';
-import { ResponseModel } from '../../../../models/common/response.model';
-import { CharacterModel } from '../../../../models/characters/character.model';
+import { ResponseModel } from '../../../models/common/response.model';
+import { CharacterModel } from '../../../models/characters/character.model';
 
 @Component({
   selector: 'sidenav',
@@ -21,6 +21,11 @@ export class SidenavComponent implements OnInit, OnDestroy {
   constructor(
     private characterService: CharacterService,
   ) { }
+
+  public redirectToCharacter(characterId: number): void {
+    this.toggleSidenav(false);
+    window.location.href = `/character/${characterId}`;
+  }
 
   public toggleSidenav(isOpen: boolean): void {
     this.toggleSidenavEvent.emit(isOpen);
