@@ -6,6 +6,8 @@ import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { FeaturesComponent } from './components/features/features.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PaginatorModule } from '../../shared/paginator/paginator.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -19,7 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    PaginatorModule,
+    ReactiveFormsModule,
   ],
   exports: [
     HomeComponent,

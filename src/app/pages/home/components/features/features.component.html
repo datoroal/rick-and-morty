@@ -23,8 +23,15 @@
             <p><b>Status: </b>{{character.status}} </p>
           </div>
         </div>
-        <!-- End of Feature Item -->
       </div>
     </div>
   </div>
+
+  <!-- Paginator -->
+  <div class="features__paginator">
+    <paginator [currentPage]="currentPage" [itemsPerPage]="itemsPerPage" [totalItems]="totalItems"
+      (pageChanged)="onPageChange($event)">
+    </paginator>
+  </div>
+
 </section>

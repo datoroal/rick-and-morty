@@ -19,16 +19,16 @@ export class CharacterService {
     this.baseUrlApi = `${apiUrl}/${this.moduleName}`;
   }
 
-  public getCharacter(pageNumber?: number, characterid?: number):
-    Observable<ResponseModel<CharacterModel> | CharacterModel> {
+  public getCharacters(pageNumber?: number): Observable<ResponseModel<CharacterModel>> {
     if (pageNumber) {
       return this.httpClient.get<ResponseModel<CharacterModel>>(`${this.baseUrlApi}/?page=${pageNumber}`);
     }
 
-    if (characterid) {
-      return this.httpClient.get<CharacterModel>(`${this.baseUrlApi}/${characterid}`);
-    }
-
     return this.httpClient.get<ResponseModel<CharacterModel>>(`${this.baseUrlApi}`);
   }
+
+  public getCharacter(characterid: number): Observable<CharacterModel> {
+    return this.httpClient.get<CharacterModel>(`${this.baseUrlApi}/${characterid}`);
+  }
+
 }

@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 2rem;
 
     @media (max-width: 512px) {
       flex-direction: column;
@@ -57,5 +58,13 @@
     &:hover {
       transform: translateY(-13px);
     }
+  }
+
+  &__paginator {
+    background: var(--lt-color-white);
+    position: sticky;
+    left: 0vw;
+    bottom: 0vh;
+    width: 100%;
   }
 }
