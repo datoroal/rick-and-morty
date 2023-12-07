@@ -4,6 +4,7 @@ import { HomeComponent } from './home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { FeaturesComponent } from './components/features/features.component';
 
 
 
@@ -13,6 +14,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     NavbarComponent,
     JumbotronComponent,
     SidenavComponent,
+    FeaturesComponent,
   ],
   imports: [
     CommonModule
